@@ -1,0 +1,24 @@
+{
+  "name": "cinefyAPI",
+  "version": "0.1.0",
+  "description": "API to interact with cinefy service",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cinefy/masterApp.git"
+  },
+  "author": "cinefy http://github.com/cinefy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cinefy/masterApp/issues"
+  },
+  "homepage": "https://github.com/cinefy/masterApp",
+  "dependencies": {
+    "mysql": "^2.5.5",
+    "sequelize": "^2.0.4",
+    "sqlite3": "^3.0.5"
+  }
+}
