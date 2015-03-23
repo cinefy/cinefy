@@ -3,7 +3,7 @@
 var Sequelize = require('sequelize'),
     url = require('url');
 
-module.exports = function(test) {
+module.exports = function() {
   var sequelize = new Sequelize('cinefy_db', 'callum', null, {
     host: 'localhost',
     dialect: 'mysql'
