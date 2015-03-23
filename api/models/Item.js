@@ -8,7 +8,7 @@ module.exports = function(sequelize) {
     picture: Sequelize.STRING,
     item_type: Sequelize.STRING,
     item_name: Sequelize.STRING,
-    time_in_movie: Sequelize.NUMBER
+    time_in_movie: Sequelize.INTEGER
   });
 
   return Item;
