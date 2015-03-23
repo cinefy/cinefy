@@ -1,7 +1,7 @@
 'use strict';
 
 var Item = require('../models/Item'),
-    sql = require(),
+    sql = require('../lib/sqltype'),
     bodyparser = require('body-parser');
 
 module.exports = function(app) {
