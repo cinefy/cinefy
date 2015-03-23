@@ -1,15 +1,13 @@
 'use strict';
 
-var Sequelize = require('sequelize');
+var mongoose = require('mongoose');
 
-module.exports = function(sequelize) {
-  var Item = sequelize.define('movie_items', {
-    movie_name: Sequelize.STRING,
-    picture: Sequelize.STRING,
-    item_type: Sequelize.STRING,
-    item_name: Sequelize.STRING,
-    time_in_movie: Sequelize.INTEGER
-  });
+var itemSchema = mongoose.Schema({
+  name: String,
 
-  return Item;
-};
+  picture: String,
+
+  time: String,
+});
+
+module.exports('Item', itemSchema);
