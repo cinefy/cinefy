@@ -1,7 +1,7 @@
 'use strict';
 
 var Like = require('../models/Like'),
-    sql = require(),
+    sql = require('../lib/sqltype'),
     bodyparser = require('body-parser');
 
 module.exports = function(app) {
