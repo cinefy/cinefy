@@ -29,12 +29,13 @@
   padding-top: 2em;
 }
 
-.smallPadding {
-  padding: 1em 1em 1em 0;
-}
-
 .topPadding li {
   padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.smallPadding {
+  padding: 1em 1em 1em 0;
 }
 
 .ctaButton {
@@ -50,4 +51,9 @@
 
 .toggleButton {
   margin: .5em .5em 0 .5em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
