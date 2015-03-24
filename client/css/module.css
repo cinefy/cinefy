@@ -7,6 +7,12 @@
   color: #fff;
 }
 
+.homeLink a {
+  font-family: 'bebasregular', sans-serif;
+  font-size: 1.414em;
+  color: #99CC33;
+}
+
 .mainHeader {
   font-family: 'bebasregular', sans-serif;
   font-size: 4.236em;

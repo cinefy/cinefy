@@ -8,4 +8,13 @@
 
 button:hover {
   cursor: pointer;
+  background-color: #243969;
+}
+
+.ctaButton:hover {
+  background-color: #6F9425;
+}
+
+a:hover {
+  color: #C7C7C7;
 }
