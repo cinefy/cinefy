@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cinefy | Demo</title>
+    <title>Cinefy | Profile</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/base.css">
@@ -25,15 +25,36 @@
       </nav>
     </header>
     <main class="pagePadding">
-      <h1 class="mainHeader mainSubHeader">Cinefy Demo</h1>
-      <div class="grid-container topPadding">
-        <video controls class="grid-50">
-          <source src="foo.mp4" type="video/mp4">
-        </video>
-        <section class="grid-50">
-        <!-- Demo of feed will go here -->
-        </section>
+      <div class="clearfix">
+        <h1 class="floatLeft">Account Preferences</h1>
+        <div>
+          <a href="myprofile.html">
+            <button class="profileButton">Profile Page</button>
+          </a>
+        </div>
       </div>
+      <section id="preferences" class="alignLeft">
+        <h2 class="smallPadding">Change which movie alerts you'd like to receieve here:</h2>
+        <form>
+          <ul>
+            <li>
+              <input type="checkbox" name="alerts" value="products">Products
+            </li>
+            <li>
+              <input type="checkbox" name="alerts" value="music">Music
+            </li>
+            <li>
+              <input type="checkbox" name="alerts" value="locations">Locations
+            </li>
+            <li>
+              <input type="checkbox" name="alerts" value="trivia">Trivia
+            </li>
+            <li class="smallPadding">
+              <input type="submit" value="Save" class="ctaButton">
+            </li>
+          </ul>
+        </form>
+      </section>
     </main>
     <footer>
       <p>Footer content goes here</p>
