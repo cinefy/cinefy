@@ -3,7 +3,7 @@
 var Item = require('../models/Item');
 var bodyparser = require('body-parser');
 
-module.exports = function() {
+module.exports = function(app) {
   app.use(bodyparser.json());
 
   app.get('/item', function(req, res) {
