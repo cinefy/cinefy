@@ -10,13 +10,13 @@
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/module.css">
     <link rel="stylesheet" type="text/css" href="../css/state.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto:100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto:100' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/bebasFont/stylesheet.css" type="text/css" charset="utf-8">
   </head>
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="navigation fullWidth">
           <li><a href="index.html">Home (logo image)</a></li>
           <li><a href="">About</a></li>
           <li><a href="">How it works</a></li>
@@ -25,19 +25,21 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Welcome to your profile page</h1>
-      <div>
-        <!-- Buttons below will serve as toggle between likes grid and preferences view -->
-        <button>Your likes</button>
-        <button>Preferences</button>
+    <main class="pagePadding">
+      <div class="clearfix">
+        <h1 class="floatLeft">Welcome to your profile page</h1>
+        <div>
+          <!-- Buttons below will serve as toggle between likes grid and preferences view -->
+          <button class="toggleButton">Your likes</button>
+          <button class="toggleButton">Preferences</button>
+        </div>
       </div>
       <!--
       "Likes grid" content
       -->
-      <section>
-        <div>
-          <p>Filter by...</p>
+      <section class="topPadding">
+        <div class="alignLeft">
+          <p class="inline">Filter by...</p>
           <select name="filterMovie">
             <option value="">Movie</option>
             <option value="jurassicPark">Jurassic Park</option>
@@ -54,39 +56,71 @@
           </select>
         </div>
         <!-- Below is where the grid-like content will go -->
-        <div>
+        <div class="grid-container">
           <!--
           Below is an example of 2 line items... I'll be able to format w/ CSS.
           Each line of the table is a new unordered list with data in each list item.
           -->
-          <ul>
-            <li><img src="" alt="Image of liked item"></li>
-            <li>(Type)</li>
-            <li>(Description of thing)</li>
-            <li>(Movie)</li>
-            <li><button>Call to action</button></li>
+          <ul class="grid-parent topPadding">
+            <li class="grid-20">
+              <img src="" alt="Image liked item">
+            </li>
+            <li class="grid-20">
+              (Type)
+            </li>
+            <li class="grid-20">
+              (Description of thing)
+            </li>
+            <li class="grid-20">
+              (Movie)
+            </li>
+            <li class="grid-20">
+              <button class="ctaButton">Call to action</button>
+            </li>
           </ul>
-          <ul>
-            <li><img src="" alt="Image of 2nd liked item"></li>
-            <li>(Type 2)</li>
-            <li>(Description of 2nd thing)</li>
-            <li>(2nd Movie)</li>
-            <li><button>Call to action</button></li>
+          <ul class="grid-parent topPadding">
+            <li class="grid-20">
+              <img src="" alt="Image 2nd liked item">
+            </li>
+            <li class="grid-20">
+              (Type 2)
+            </li>
+            <li class="grid-20">
+              (Description of 2nd thing)
+            </li>
+            <li class="grid-20">
+              (2nd Movie)
+            </li>
+            <li class="grid-20">
+              <button class="ctaButton">Call to action</button>
+            </li>
           </ul>
         </div>
       </section>
       <!--
       "Preferences" content
       -->
-      <section id="preferences">
+      <section id="preferences" class="alignLeft">
         <h1>Account Preferences</h1>
-        <p>Change which movie alerts you'd like to receieve here:</p>
+        <h2 class="smallPadding">Change which movie alerts you'd like to receieve here:</h2>
         <form>
-          <input type="checkbox" name="alerts" value="products">Products
-          <input type="checkbox" name="alerts" value="music">Music
-          <input type="checkbox" name="alerts" value="locations">Locations
-          <input type="checkbox" name="alerts" value="trivia">Trivia
-          <input type="submit" value="Save">
+          <ul>
+            <li>
+              <input type="checkbox" name="alerts" value="products">Products
+            </li>
+            <li>
+              <input type="checkbox" name="alerts" value="music">Music
+            </li>
+            <li>
+              <input type="checkbox" name="alerts" value="locations">Locations
+            </li>
+            <li>
+              <input type="checkbox" name="alerts" value="trivia">Trivia
+            </li>
+            <li class="smallPadding">
+              <input type="submit" value="Save">
+            </li>
+          </ul>
         </form>
       </section>
     </main>

@@ -1,0 +1,49 @@
+.navigation li {
+  padding: 2em;
+  display: inline;
+}
+
+.navigation a {
+  color: #fff;
+}
+
+.mainHeader {
+  font-family: 'bebasregular', sans-serif;
+  font-size: 4.236em;
+  color: #99CC33;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.inline {
+  display: inline;
+}
+
+.topPadding {
+  padding-top: 2em;
+}
+
+.smallPadding {
+  padding: 1em 1em 1em 0;
+}
+
+.topPadding li {
+  padding-top: 1em;
+}
+
+.ctaButton {
+  background-color: #99CC33;
+  color: #FFF;
+  font-family: 'bebasregular', sans-serif;
+  font-size: .9em;
+  border: none;
+  border-radius: .7em;
+  padding: .7em 2.3em;
+  letter-spacing: .1em;
+}
+
+.toggleButton {
+  margin: .5em .5em 0 .5em;
+}

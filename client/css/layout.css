@@ -1,3 +1,40 @@
+.fullWidth {
+  width: 100%;
+}
+
+.verticalAlign {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.homeContainer {
+  margin-top: 10em;
+}
+
+.tagline {
+  margin-top: 1em;
+}
+
+.buttonContainer {
+  margin-top: 3.5em;
+}
+
+.pagePadding {
+  padding: 5em;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
 /* ============================================ */
 /* This file has a mobile-to-desktop breakpoint */
 /* ============================================ */
