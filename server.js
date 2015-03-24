@@ -1,19 +1,17 @@
 var express = require('express');
-var Sequelize = require('sequelize');
+var mongoose = require('mongoose');
 var itemRoute = require('./api/routes/item_routes');
-var likeRoute = require('./api/routes/like_routes');
-var testRoute = require('./api/routes/test_routes');
-// var movieRoute = require('./api/routes/movie_routes');
+var userRoute = require('./api/routes/user_routes');
 
-var sequelize = new Sequelize('mysql://localhost:3000/cinefy', {});
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/cinefy_development');
 
 var app = express();
-var router = express.Router();
 
-itemRoute(router);
-likeRoute(router);
-testRoute(router);
-// movieRoute(router);
+var itemRoute = express.Router();
+var userRoute = express.Router();
+
+app.use('/api/v1', itemRoute);
+app.use('/api/v1', userRoute);
 
 app.listen((process.env.PORT || 3000), function() {
   console.log('server listening on port ' + (process.env.PORT || 3000));

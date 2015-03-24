@@ -10,4 +10,4 @@ var itemSchema = mongoose.Schema({
   time: String,
 });
 
-module.exports('Item', itemSchema);
+module.exports = mongoose.model('Item', itemSchema);
