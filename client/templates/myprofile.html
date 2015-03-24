@@ -18,7 +18,6 @@
       <nav>
         <ul class="navigation fullWidth">
           <li><a href="index.html">Home (logo image)</a></li>
-          <li><a href="">About</a></li>
           <li><a href="">How it works</a></li>
           <li><a href="myprofile.html">My Profile</a></li>
           <li><a href="">Sign up | Log in</a></li>
@@ -29,14 +28,11 @@
       <div class="clearfix">
         <h1 class="floatLeft">Welcome to your profile page</h1>
         <div>
-          <!-- Buttons below will serve as toggle between likes grid and preferences view -->
-          <button class="toggleButton">Your likes</button>
-          <button class="toggleButton">Preferences</button>
+          <a href="preferences.html">
+            <button class="profileButton">Account Preferences</button>
+          </a>
         </div>
       </div>
-      <!--
-      "Likes grid" content
-      -->
       <section class="topPadding">
         <div class="alignLeft">
           <p class="inline">Filter by...</p>
@@ -58,7 +54,6 @@
         <!-- Below is where the grid-like content will go -->
         <div class="grid-container topPadding likesList">
           <!--
-          Below is an example of 2 line items... I'll be able to format w/ CSS.
           Each line of the table is a new unordered list with data in each list item.
           -->
           <ul class="grid-parent flex">
@@ -66,33 +61,18 @@
               <img src="http://placehold.it/50x50" alt="Image liked item">
             </li>
             <li class="grid-20">
-              (Type)
+              (Movie)
             </li>
             <li class="grid-20">
               (Description of thing)
             </li>
             <li class="grid-20">
-              (Movie)
+              (Type)
             </li>
             <li class="grid-20">
-              <button class="ctaButton">Call to action</button>
-            </li>
-          </ul>
-          <ul class="grid-parent flex">
-            <li class="grid-20">
-              <img src="http://placehold.it/50x50" alt="Image 2nd liked item">
-            </li>
-            <li class="grid-20">
-              (Type 2)
-            </li>
-            <li class="grid-20">
-              (Description of 2nd thing)
-            </li>
-            <li class="grid-20">
-              (2nd Movie)
-            </li>
-            <li class="grid-20">
-              <button class="ctaButton">Call to action</button>
+              <a href="" target="_blank">
+                <button class="ctaButton">Call to action</button>
+              </a>
             </li>
           </ul>
           <ul class="grid-parent flex">
@@ -100,45 +80,40 @@
               <img src="http://placehold.it/50x50" alt="Image liked item">
             </li>
             <li class="grid-20">
-              (Type)
+              (Movie)
             </li>
             <li class="grid-20">
               (Description of thing)
             </li>
             <li class="grid-20">
+              (Type)
+            </li>
+            <li class="grid-20">
+              <a href="" target="_blank">
+                <button class="ctaButton">Call to action</button>
+              </a>
+            </li>
+          </ul>
+          <ul class="grid-parent flex">
+            <li class="grid-20">
+              <img src="http://placehold.it/50x50" alt="Image liked item">
+            </li>
+            <li class="grid-20">
               (Movie)
             </li>
             <li class="grid-20">
-              <button class="ctaButton">Call to action</button>
+              (Description of thing)
+            </li>
+            <li class="grid-20">
+              (Type)
+            </li>
+            <li class="grid-20">
+              <a href="" target="_blank">
+                <button class="ctaButton">Call to action</button>
+              </a>
             </li>
           </ul>
         </div>
-      </section>
-      <!--
-      "Preferences" content
-      -->
-      <section id="preferences" class="alignLeft">
-        <h1>Account Preferences</h1>
-        <h2 class="smallPadding">Change which movie alerts you'd like to receieve here:</h2>
-        <form>
-          <ul>
-            <li>
-              <input type="checkbox" name="alerts" value="products">Products
-            </li>
-            <li>
-              <input type="checkbox" name="alerts" value="music">Music
-            </li>
-            <li>
-              <input type="checkbox" name="alerts" value="locations">Locations
-            </li>
-            <li>
-              <input type="checkbox" name="alerts" value="trivia">Trivia
-            </li>
-            <li class="smallPadding">
-              <input type="submit" value="Save">
-            </li>
-          </ul>
-        </form>
       </section>
     </main>
     <footer>

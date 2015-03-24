@@ -5,3 +5,7 @@
 .likesList ul:nth-child(even) {
   background-color: #E6E6E6;
 }
+
+button:hover {
+  cursor: pointer;
+}
