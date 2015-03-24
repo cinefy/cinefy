@@ -7,7 +7,7 @@ var itemSchema = mongoose.Schema({
 
   picture: String,
 
-  time: String,
+  time: Integer
 });
 
 module.exports = mongoose.model('Item', itemSchema);
