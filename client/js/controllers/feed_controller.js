@@ -25,12 +25,12 @@ module.exports = function(app) {
 
     $scope.showDisplay = function() {
       function displayItem(element, index){
-        if(element.time < document.getElementsByClassName("html5-progress-bar"[0].getAttribute("aria-valuenow"))) {
+        if(element.time < document.getElementById("mainmovie").currentTime) {
         $scope.displayed.push(element);
         $scope.items.splice(index, 1);
         }
-      };
-      $scope.apply($scope.items.forEach(displayItem);
+      }
+      $scope.apply($scope.items.forEach(displayItem));
     },
 
     $scope.newLike = function(like) {
