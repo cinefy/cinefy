@@ -18,3 +18,11 @@ button:hover {
 a:hover {
   color: #C7C7C7;
 }
+
+.signupTabbox a:hover{
+  color: #304F92;
+}
+
+.homeLink a:hover {
+  color: #6F9425;
+}
