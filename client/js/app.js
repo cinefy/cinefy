@@ -10,7 +10,6 @@ require('./controllers/feed_controller')(cinefyApp);
 cinefyApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: 'templates/demo.html',
-    controller:'feedController'
+    templateUrl: 'templates/home.html'
   });
 }]);

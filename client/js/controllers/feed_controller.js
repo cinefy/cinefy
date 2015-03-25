@@ -21,6 +21,7 @@ module.exports = function(app) {
       .error(function(data) {
         console.log(data);
       });
+
     };
 
     $scope.showDisplay = function() {
@@ -44,10 +45,14 @@ module.exports = function(app) {
       .error(function(data) {
         console.log(data);
       });
+
     };
+
 
     $scope.dislike = function(like) {
       $scope.displayed.splice($scope.displayed.indexOf(like), 1);
     };
   }]);
+
 };
+
