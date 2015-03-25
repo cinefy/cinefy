@@ -9,7 +9,7 @@ module.exports = function(app) {
     $scope.get = function(data) {
       $http({
         method: 'GET',
-        url: '/api/v1/get_likes';
+        url: '/api/v1/get_likes'
       })
       .success(function(data) {
         $scope.get_likes = data;
