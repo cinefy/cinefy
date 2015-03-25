@@ -9,6 +9,7 @@ var passport = require('passport');
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/cinefy_development');
 
 var app = express();
+app.use(express.static(__dirname + '/build'));
 
 app.set('appSecret', process.env.SECRET || 'changethis');
 app.use(passport.initialize());

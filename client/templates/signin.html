@@ -25,16 +25,30 @@
       </nav>
     </header>
     <main>
-      <section class="verticalAlign homeContainer marginContainer">
-        <h1 class="mainHeader">Cinefy</h1>
-        <h2 class="tagline">Tagline here.</h2>
-        <div class="buttonContainer">
-          <a href="">
-            <button>Sign up</button>
-          </a>
-          <a href="">
-            <button>Log in</button>
-          </a>
+      <section class="verticalAlign pagePadding">
+        <div class="signupContainer">
+          <div class="signupTabbox">
+            <a href="#" id="login" class="tab">Log in</a>
+            <a href="#" id="signup" class="tab select">Sign up</a>
+          </div>
+          <div class="panel">
+            <div id="signupbox" class="signupbox">
+              <h2 class="smallTopMargin">Sign up for an account</h2>
+              <form class="accountForm">
+                <input class="formInput" placeholder="Username">
+                <input class="formInput" placeholder="Password">
+                <button class="smallTopMargin" type="submit">Sign up</button>
+              </form>
+            </div>
+            <div id="loginbox" class="loginbox">
+              <h2 class="formTitleMargin">Log in to your account</h2>
+              <form class="accountForm">
+                <input class="formInput" placeholder="Username">
+                <input class="formInput" placeholder="Password">
+                <button class="smallTopMargin" type="submit">Log in</button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>

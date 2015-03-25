@@ -14,7 +14,7 @@ module.exports = function(app, appSecret) {
     });
   });
 
-  app.post('/item', eat_auth(appSecret) function(req, res) {
+  app.post('/item', eat_auth(appSecret), function(req, res) {
     var newItem = new Item();
     newItem.name = req.body.name;
     newItem.picture = req.body.picture;

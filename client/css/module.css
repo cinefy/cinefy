@@ -63,3 +63,68 @@
   display: flex;
   align-items: center;
 }
+
+/*Sign up page styles*/
+
+.signupContainer {
+  width: 350px;
+}
+
+.signupTabbox {
+  height: 40px;
+}
+
+.panel {
+  background-color: #E6E6E6;
+  height: 300px;
+}
+
+.tab {
+  background: #C7C7C7;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 175px;
+  float: right;
+  font-weight: bold;
+}
+
+.signupTabbox a {
+  color: #000;
+}
+
+.select {
+  background-color: #E6E6E6;
+  border-top: 3px solid #99CC33;
+}
+
+.signupbox {
+  min-height: 200px;
+  padding: 10px;
+}
+
+.loginbox {
+  min-height: 200px;
+  padding: 10px;
+  display: none;
+}
+
+.accountForm {
+  padding: 1.5em;
+}
+
+.formInput {
+  margin: 1.2em auto;
+  width: 100%;
+  display: block;
+  background-color: #E6E6E6;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 1em;
+}
+
+.smallTopMargin {
+  margin-top: 1em;
+}
+
