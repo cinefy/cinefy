@@ -7,6 +7,14 @@ var itemSchema = mongoose.Schema({
 
   picture: String,
 
+  description: String,
+
+  type: String,
+
+  movie: String,
+
+  cta: String,
+
   time: Number
 });
 

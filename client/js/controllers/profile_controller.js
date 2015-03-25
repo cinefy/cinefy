@@ -1,18 +1,18 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('profileController', ['$scope', '$http', 
-    function($scope, $http) {
+  app.controller('profileController', ['$scope', '$http', '$cookies',
+    function($scope, $http, $cookies) {
 
-    $scope.get_likes = [];
+    $scope.allLikes = [];
 
-    $scope.get = function(data) {
+    $scope.getLikes = function(name) {
       $http({
         method: 'GET',
-        url: '/api/v1/get_likes'
+        url: '/api/v1/get_likes/' + $cookies.name
       })
       .success(function(data) {
-        $scope.get_likes = data;
+        $scope.allLikes = data;
       })
       .error(function(data) {
         console.log(data);
