@@ -19,8 +19,8 @@ module.exports = function(app, passport, appSecret) {
       newUser.save(function(err, user) {
         if(err) return res.status(500).send({'msg': 'could not save user'});
         user.generateToken(appSecret, function(err, token) {
-          if(err) return res.status(500).send({msg: 'could not generate toekn'});
-          res.json({eat: token});
+          if(err) return res.status(500).send({'msg': 'could not generate token'});
+          res.json({eat: token, name: user.basic.name});
         });
       });
     });
@@ -29,8 +29,8 @@ module.exports = function(app, passport, appSecret) {
   //sign in
   app.get('/sign_in', passport.authenticate('basic', {session: false}), function(req, res) {
     req.user.generateToken(appSecret, function(err, token) {
-      if(err) return res.status(500).send({msg: 'could not generate token'});
-      res.json({eat: token});
+      if(err) return res.status(500).send({'msg': 'could not generate token'});
+      res.json({eat: token, name: req.user.basic.name});
     });
   });
 
@@ -55,7 +55,7 @@ module.exports = function(app, passport, appSecret) {
         if(err) return res.status(500).send({'msg': 'could not find item'});
         var item = data;
 
-        newUser.likes.push(item);
+        newUser.likes.push(JSON.stringify(item));
 
         //update user in db
         User.findOneAndUpdate({"basic.name": req.body.name}, newUser, function(err, data) {
