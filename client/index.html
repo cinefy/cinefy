@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" ng-app="cinefyApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,19 +26,7 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section class="verticalAlign homeContainer">
-        <h1 class="mainHeader">Cinefy</h1>
-        <h2 class="tagline">Tagline here.</h2>
-        <div class="buttonContainer">
-          <a href="signin.html">
-            <button>Sign up</button>
-          </a>
-          <a href="signin.html">
-            <button>Log in</button>
-          </a>
-        </div>
-      </section>
+    <main data-ng-view>
     </main>
     <footer>
       <p class="footerText">Cinefy was created by <a href="https://github.com/brandonburns">Brandon Burns</a>, <a href="https://github.com/callumsong">Callum Song</a>, <a href="https://github.com/KeriBrady">Keri Brady</a>, <a href="https://github.com/rraeburn">Ryan Raeburn</a>, and <a href="https://github.com/seangolob">Sean Golob<a>.</p>

@@ -20,13 +20,13 @@ module.exports = function(app) {
     $scope.signUp = function() {
       $http({
         method: 'POST',
-        url: '/api/v1/signup',
+        url: '/api/v1/create_user',
         data: {name: $scope.signup.username, password: $scope.signup.password}
       })
       .success(function(data) {
         console.log('user successfully created');
         $cookies.eat = data.eat;
-        $cookies.username = $scope.signup.username;
+        $cookies.username = data.name;
         $location.path('/profile');
       })
       .error(function(data) {
@@ -40,7 +40,7 @@ module.exports = function(app) {
       .success(function(data) {
         console.log('logged in');
         $cookies.eat = data.eat;
-        $cookies.username = $scope.login.username;
+        $cookies.username = data.name;
         $location.path('/profile');
       })
       .error(function(data) {
