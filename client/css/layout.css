@@ -39,6 +39,9 @@
   text-align: left;
 }
 
+.center {
+  margin: 0 auto;
+}
 
 /* ============================================ */
 /* This file has a mobile-to-desktop breakpoint */
