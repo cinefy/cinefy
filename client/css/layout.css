@@ -27,6 +27,10 @@
   padding: 5em;
 }
 
+.pagePaddingLarge {
+  padding: 8em;
+}
+
 .floatLeft {
   float: left;
 }
@@ -35,6 +39,9 @@
   text-align: left;
 }
 
+.center {
+  margin: 0 auto;
+}
 
 /* ============================================ */
 /* This file has a mobile-to-desktop breakpoint */
