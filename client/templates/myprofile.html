@@ -1,36 +1,32 @@
-<!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cinefy | Profile</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/base.css">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <link rel="stylesheet" type="text/css" href="../css/module.css">
-    <link rel="stylesheet" type="text/css" href="../css/state.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto:100' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../css/bebasFont/stylesheet.css" type="text/css" charset="utf-8">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul class="navigation fullWidth">
-          <li class="homeLink"><a href="index.html">Cinefy</a></li>
-          <li><a href="">How it works</a></li>
-          <li><a href="myprofile.html">My Profile</a></li>
-          <li><a href="">Sign up | Log in</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="pagePadding">
-      <div class="clearfix">
-        <h1 class="floatLeft">Welcome to your profile page</h1>
-        <div>
-          <a href="preferences.html">
-            <button class="profileButton">Account Preferences</button>
-          </a>
+<div class="pagePadding">
+  <div class="clearfix">
+    <h1 class="floatLeft">Welcome to your profile page</h1>
+    <div>
+      <a href="preferences.html">
+        <button class="profileButton">Account Preferences</button>
+      </a>
+    </div>
+  </div>
+  <section class="topPadding">
+    <div class="alignLeft">
+      <p class="inline">Filter by...</p>
+      <select name="filterMovie">
+        <option value="">Movie</option>
+        <option value="jurassicPark">Jurassic Park</option>
+        <option value="bourneIdentity">Bourne Identity</option>
+        <option value="jamesBondSkyfall">James Bond: Skyfall</option>
+        <option value="terminator2">Terminator 2</option>
+      </select>
+      <select name="filterType">
+        <option value="">Type</option>
+        <option value="products">Products</option>
+        <option value="music">Music</option>
+        <option value="locations">Locations</option>
+        <option value="trivia">Trivia</option>
+      </select>
+    </div>
+    <!-- Below is where the grid-like content will go -->
+    <div class="grid-container topPadding likesList">
         </div>
       </div>
       <section class="topPadding">
@@ -66,9 +62,6 @@
           </ul>
         </div>
       </section>
-    </main>
-    <footer>
-      <p>Footer content goes here</p>
-    </footer>
-  </body>
-</html>
+    </div>
+  </section>
+</div>

@@ -1,59 +1,29 @@
-<!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cinefy</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/base.css">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <link rel="stylesheet" type="text/css" href="../css/module.css">
-    <link rel="stylesheet" type="text/css" href="../css/state.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto:100' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../css/bebasFont/stylesheet.css" type="text/css" charset="utf-8">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul class="navigation fullWidth">
-          <li class="homeLink"><a href="index.html">Cinefy</a></li>
-          <li><a href="">How it works</a></li>
-          <li><a href="myprofile.html">My Profile</a></li>
-          <li><a href="">Sign up | Log in</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="verticalAlign pagePadding">
-        <div class="signupContainer">
-          <div class="signupTabbox">
-            <a href="#" id="login" class="tab">Log in</a>
-            <a href="#" id="signup" class="tab select">Sign up</a>
-          </div>
-          <div class="panel">
-            <div id="signupbox" class="signupbox">
-              <h2 class="smallTopMargin">Sign up for an account</h2>
-              <form class="accountForm">
-                <input class="formInput" placeholder="Username">
-                <input class="formInput" placeholder="Password">
-                <button class="smallTopMargin" type="submit">Sign up</button>
-              </form>
-            </div>
-            <div id="loginbox" class="loginbox">
-              <h2 class="formTitleMargin">Log in to your account</h2>
-              <form class="accountForm">
-                <input class="formInput" placeholder="Username">
-                <input class="formInput" placeholder="Password">
-                <button class="smallTopMargin" type="submit">Log in</button>
-              </form>
-            </div>
-          </div>
+
+<div>
+  <section class="verticalAlign pagePadding">
+    <div class="signupContainer" data-ng-controller="signupinController" data-ng-init="login = true">
+      <div class="signupTabbox">
+        <a href="#" id="login" class="tab" data-ng-click=>Log in</a>
+        <a href="#" id="signup" class="tab select">Sign up</a>
+      </div>
+      <div class="panel">
+        <div id="signupbox" class="signupbox" data-ng-if="!login">
+          <h2 class="smallTopMargin">Sign up for an account</h2>
+          <form class="accountForm" data-ng-submit="signUp()">
+            <input class="formInput" placeholder="Username" data-ng-model="signup.username" required>
+            <input class="formInput" placeholder="Password" data-ng-model="signup.password" required>
+            <button class="smallTopMargin" type="submit">Sign up</button>
+          </form>
         </div>
-      </section>
-    </main>
-    <footer>
-      <p>Footer content goes here</p>
-    </footer>
-  </body>
-</html>
+        <div id="loginbox" class="loginbox" data-ng-if="login">
+          <h2 class="formTitleMargin">Log in to your account</h2>
+          <form class="accountForm">
+            <input class="formInput" placeholder="Username" data-ng-model="login.username">
+            <input class="formInput" placeholder="Password" data-ng-model="login.password">
+            <button class="smallTopMargin" type="submit" data-ng-click="signIn()">Log in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
