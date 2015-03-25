@@ -52,66 +52,17 @@
           </select>
         </div>
         <!-- Below is where the grid-like content will go -->
-        <div class="grid-container topPadding likesList">
+        <div ng-controller="profileController" class="grid-container topPadding likesList">
           <!--
           Each line of the table is a new unordered list with data in each list item.
           -->
-          <ul class="grid-parent flex">
-            <li class="grid-20">
-              <img src="http://placehold.it/50x50" alt="Image liked item">
-            </li>
-            <li class="grid-20">
-              (Movie)
-            </li>
-            <li class="grid-20">
-              (Description of thing)
-            </li>
-            <li class="grid-20">
-              (Type)
-            </li>
-            <li class="grid-20">
-              <a href="" target="_blank">
-                <button class="ctaButton">Call to action</button>
-              </a>
-            </li>
-          </ul>
-          <ul class="grid-parent flex">
-            <li class="grid-20">
-              <img src="http://placehold.it/50x50" alt="Image liked item">
-            </li>
-            <li class="grid-20">
-              (Movie)
-            </li>
-            <li class="grid-20">
-              (Description of thing)
-            </li>
-            <li class="grid-20">
-              (Type)
-            </li>
-            <li class="grid-20">
-              <a href="" target="_blank">
-                <button class="ctaButton">Call to action</button>
-              </a>
-            </li>
-          </ul>
-          <ul class="grid-parent flex">
-            <li class="grid-20">
-              <img src="http://placehold.it/50x50" alt="Image liked item">
-            </li>
-            <li class="grid-20">
-              (Movie)
-            </li>
-            <li class="grid-20">
-              (Description of thing)
-            </li>
-            <li class="grid-20">
-              (Type)
-            </li>
-            <li class="grid-20">
-              <a href="" target="_blank">
-                <button class="ctaButton">Call to action</button>
-              </a>
-            </li>
+          <ul ng-repeat="like in allLikes" class="grid-parent flex">
+            <li> {{ like.name }} </li>
+            <li> {{ like.picture }} </li>
+            <li> {{ like.movie }} </li>
+            <li> {{ like.description }} </li>
+            <li> {{ like.type }} </li>
+            <li> {{ like.cta }} </li>
           </ul>
         </div>
       </section>
