@@ -26,6 +26,7 @@ module.exports = function(app) {
       .success(function(data) {
         console.log('user successfully created');
         $cookies.eat = data.eat;
+        $cookies.username = $scope.signup.username;
         $location.path('/profile');
       })
       .error(function(data) {
@@ -39,6 +40,7 @@ module.exports = function(app) {
       .success(function(data) {
         console.log('logged in');
         $cookies.eat = data.eat;
+        $cookies.username = $scope.login.username;
         $location.path('/profile');
       })
       .error(function(data) {
