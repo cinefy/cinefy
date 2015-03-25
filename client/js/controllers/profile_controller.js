@@ -6,7 +6,7 @@ module.exports = function(app) {
 
     $scope.allLikes = [];
 
-    $scope.getLikes = function(name) {
+    $scope.getLikes = function() {
       $http({
         method: 'GET',
         url: '/api/v1/get_likes/' + $cookies.name

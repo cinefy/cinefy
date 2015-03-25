@@ -1,4 +1,4 @@
-<div class="pagePadding">
+<div data-ng-href="/#/profile" class="pagePadding">
   <div class="clearfix">
     <h1 class="floatLeft">Welcome to your profile page</h1>
     <div>
@@ -48,7 +48,7 @@
           </select>
         </div>
         <!-- Below is where the grid-like content will go -->
-        <div ng-controller="profileController" class="grid-container topPadding likesList">
+        <div ng-controller="profileController" data-ng-init="getLikes()" class="grid-container topPadding likesList">
           <!--
           Each line of the table is a new unordered list with data in each list item.
           -->
