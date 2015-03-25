@@ -17,7 +17,7 @@ require('./api/lib/passport')(passport);
 var itemRouter = express.Router();
 var userRouter = express.Router();
 
-itemRoute(itemRouter, passport, app.get('appSecret'));
+itemRoute(itemRouter, app.get('appSecret'));
 userRoute(userRouter, passport, app.get('appSecret'));
 
 app.use('/api/v1', itemRouter);

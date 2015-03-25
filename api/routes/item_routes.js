@@ -2,8 +2,9 @@
 
 var Item = require('../models/Item');
 var bodyparser = require('body-parser');
+var eat_auth = require('../lib/eat_auth');
 
-module.exports = function(app) {
+module.exports = function(app, appSecret) {
   app.use(bodyparser.json());
 
   app.get('/item', function(req, res) {
@@ -13,7 +14,7 @@ module.exports = function(app) {
     });
   });
 
-  app.post('/item', function(req, res) {
+  app.post('/item', eat_auth(appSecret) function(req, res) {
     var newItem = new Item();
     newItem.name = req.body.name;
     newItem.picture = req.body.picture;
