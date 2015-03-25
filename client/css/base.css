@@ -98,6 +98,11 @@ button {
   outline: none;
 }
 
+input {
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
 select {
   border: 1px solid black;
   font-family: 'Open Sans', sans-serif;
@@ -115,7 +120,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  /*padding-bottom: 4em;*/
+  padding-bottom: 4em;
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
