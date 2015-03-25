@@ -21,7 +21,7 @@ module.exports = function(app) {
       .error(function(data) {
         console.log(data);
       });
-    },
+    };
 
     $scope.showDisplay = function() {
       function displayItem(element, index){
@@ -31,7 +31,7 @@ module.exports = function(app) {
         }
       }
       $scope.apply($scope.items.forEach(displayItem));
-    },
+    };
 
     $scope.newLike = function(like) {
       $http({
@@ -44,7 +44,7 @@ module.exports = function(app) {
       .error(function(data) {
         console.log(data);
       });
-    },
+    };
 
     $scope.dislike = function(like) {
       $scope.displayed.splice($scope.displayed.indexOf(like), 1);

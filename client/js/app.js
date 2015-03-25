@@ -9,8 +9,8 @@ require('./controllers/feed_controller')(cinefyApp);
 
 cinefyApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
-  .when('/feed', {
-    templateUrl: 'templates/feed.html',
+  .when('/', {
+    templateUrl: 'templates/demo.html',
     controller:'feedController'
   });
 }]);

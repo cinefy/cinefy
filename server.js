@@ -8,6 +8,7 @@ var itemRoute = require('./api/routes/item_routes');
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/cinefy_development');
 
 var app = express();
+app.use(express.static(__dirname + '/build'));
 
 var itemRouter = express.Router();
 // var userRouter = express.Router();
