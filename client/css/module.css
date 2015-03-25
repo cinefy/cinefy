@@ -70,6 +70,10 @@
   align-items: center;
 }
 
+.footerText {
+  font-size: 0.8em;
+}
+
 /*Sign up page styles*/
 
 .signupContainer {
