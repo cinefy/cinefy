@@ -11,6 +11,7 @@ module.exports = function(app) {
     $scope.displayed = [];
 
     $scope.getAll = function() {
+      $http.defaults.headers.common['eat'] = $cookies.eat;
       $http({
         method: 'GET',
         url: 'api/v1/item'
@@ -34,9 +35,11 @@ module.exports = function(app) {
     };
 
     $scope.newLike = function(like) {
+      $http.defaults.headers.common['eat'] = $cookies.eat;
       $http({
         method: 'POST',
-        url: 'api/v1/like_item'
+        url: 'api/v1/like_item',
+        name: $cookies.name
       })
       .success(function() {
         $scope.displayed.splice($scope.displayed.indexOf(like), 1);
