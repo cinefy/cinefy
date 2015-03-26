@@ -9,8 +9,6 @@ var itemSchema = mongoose.Schema({
 
   description: String,
 
-  type: String,
-
   movie: String,
 
   cta: String,

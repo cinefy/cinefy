@@ -42,25 +42,24 @@ module.exports = function(app, passport, appSecret) {
     });
   });
 
-  //like item
+  //update user profile with liked item
   app.put('/like_item/:item', eat_auth(appSecret), function(req, res) {
-    
-    //find appropriate user in db
-    User.findOne({"basic.name": req.body.name}, function(err, data) {
-      if(err) return res.status(500).send({'msg': 'could not like item'});
-      var newUser = data;
+    Item.findOne({"name": req.params.item}, function(err,data) {
+      if(err) return res.status(500).send({'msg':'could not find item'});
+
+      var likedItem = data;
+      delete likedItem._id;
       
-      //find appropriate item obj in db
-      Item.findOne({"name": req.params.item}, function(err, data) {
-        if(err) return res.status(500).send({'msg': 'could not find item'});
-        var item = data;
+      User.findOne({"basic.name": req.body.name}, function(err, data) {
+        if(err) return res.status(500).send({'msg':'could not find user'});
+        var newUser = data;
+        delete newUser._id;
 
-        newUser.likes.push(JSON.stringify(item));
-
-        //update user in db
-        User.findOneAndUpdate({"basic.name": req.body.name}, newUser, function(err, data) {
-          if(err) return res.status(500).send({'msg': 'could not like item'});
-          res.json(data);
+        newUser.likes.push(JSON.stringify(likedItem));
+      
+        User.update({"basic.name": req.body.name}, newUser, function(err) {
+          if(err) return res.status(500).send({'msg': 'could not add liked item'});
+          res.json(newUser);
         });
       });
     });

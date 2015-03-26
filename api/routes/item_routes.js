@@ -18,6 +18,9 @@ module.exports = function(app, appSecret) {
     var newItem = new Item();
     newItem.name = req.body.name;
     newItem.picture = req.body.picture;
+    newItem.description = req.body.description;
+    newItem.movie = req.body.movie;
+    newItem.cta = req.body.cta;
     newItem.time = req.body.time;
     newItem.save(function(err, data) {
       if (err) return res.status(500).send({'msg': 'could not save item'});
