@@ -7,9 +7,11 @@ require('angular-utf8-base64');
 
 var cinefyApp = angular.module('cinefyApp', ['ngRoute', require('angular-cookies'), 'utf8-base64']);
 
+require('./lib/users')(cinefyApp);
 require('./controllers/feed_controller')(cinefyApp);
 require('./controllers/profile_controller')(cinefyApp);
 require('./controllers/signup_controller')(cinefyApp);
+
 
 cinefyApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider

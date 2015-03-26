@@ -22,7 +22,8 @@
           <li class="homeLink"><a ng-href="/#/">Cinefy</a></li>
           <li><a ng-href="/#/play">How it works</a></li>
           <li><a ng-href="/#/profile">My Profile</a></li>
-          <li><a data-ng-href="/#/signin">Sign up | Log in</a></li>
+          <li><a data-ng-href="/#/signin" data-ng-if="logOut()">Sign up | Log in</a></li>
+          <li><a data-ng-href="/#/signin" data-ng-if="loggedIn()">Log out</a></li>
         </ul>
       </nav>
     </header>
