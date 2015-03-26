@@ -1,4 +1,4 @@
-<div class="pagePadding">
+<div data-ng-href="/#/play" class="pagePadding">
   <h1 class="mainHeader mainSubHeader">Cinefy Demo</h1>
   <div class="grid-container topPadding">
     <video controls class="grid-50 fullWidth" id="mainmovie">
@@ -7,13 +7,13 @@
     <section class="grid-50">
       <div id="preview" class="center"></div>
     </section>
-    <div data-ng-controller="feedController" data-ng-init="getAll()">
-      <ul data-ng-repeat="item in displayed">
-        <p>{{item.name}}</p>   <!-- timestamp -->
-        <img src="{{item.picture}}">  <!-- icon -->
-        <p>{{item.description}}</p>   <!-- title/description -->
-        <button data-ng-click="newLike(item)">Like</button>   <!-- like -->
-        <button data-ng-click="dislike(item)"></button>   <!-- dislike -->
+    <div data-ng-controller="feedController" data-ng-init="workMagic()">
+      <ul data-ng-if="showcase" data-ng-repeat="show in showcase">
+        <li>{{ show.name }}</li>   <!-- timestamp -->
+        <li><img src="{{ show.picture }}"></li>  <!-- icon -->
+        <li>{{ show.description}}</li>   <!-- title/description -->
+        <li><button data-ng-click="newLike(show)">Like</button></li>   <!-- like -->
+        <li><button data-ng-click="dislike(show)">Dislike</button></li>   <!-- dislike -->
       </ul>
     </div>
   </div>
