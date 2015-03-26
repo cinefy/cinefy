@@ -3,6 +3,7 @@
 module.exports = function(app) {
   app.controller('signupinController', ['$scope', '$cookies', '$location', '$http', 'base64', function($scope, $cookies, $location, $http, base64) {
 
+
     if($cookies.eat) {
       $location.path('/profile');
     }
