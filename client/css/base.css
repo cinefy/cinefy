@@ -123,7 +123,6 @@ body {
   padding-bottom: 4em;
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
 }
 
 footer {
@@ -138,3 +137,16 @@ footer {
 }
 /*End footer styles*/
 
+
+
+
+/*Small Tablet
+********************************************/
+@media only screen and (min-width: 42em) {
+}
+
+/*Large tablet and Desktop
+********************************************/
+@media only screen and (min-width: 73em) {
+
+}

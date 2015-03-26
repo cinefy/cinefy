@@ -1,16 +1,19 @@
-.navigation li {
-  padding: 2em;
-  display: inline;
-}
-
 .navigation a {
   color: #fff;
+}
+
+.navigation li {
+  padding: .3em 0;
 }
 
 .homeLink a {
   font-family: 'bebasregular', sans-serif;
   font-size: 1.414em;
   color: #99CC33;
+}
+
+.homeLink li {
+  padding: 0;
 }
 
 .mainHeader {
@@ -77,7 +80,7 @@
 /*Sign up page styles*/
 
 .signupContainer {
-  width: 350px;
+  width: 300px;
 }
 
 .signupTabbox {
@@ -86,7 +89,7 @@
 
 .panel {
   background-color: #E6E6E6;
-  height: 300px;
+  height: 250px;
 }
 
 .tab {
@@ -95,7 +98,7 @@
   height: 40px;
   line-height: 40px;
   text-align: center;
-  width: 175px;
+  width: 150px;
   float: right;
   font-weight: bold;
   border-top: 3px solid #C7C7C7;
@@ -132,4 +135,31 @@
   border: none;
   border-bottom: 1px solid #000;
   font-size: 1em;
+}
+
+/*Small Tablet
+********************************************/
+@media only screen and (min-width: 42em) {
+  .navigation li {
+    padding: 2em;
+    display: inline;
+  }
+
+  .signupContainer {
+    width: 350px;
+  }
+
+  .panel {
+    height: 300px;
+  }
+
+  .tab {
+    width: 175px;
+  }
+}
+
+/*Large tablet and Desktop
+********************************************/
+@media only screen and (min-width: 73em) {
+
 }
