@@ -17,6 +17,7 @@ button:hover {
 
 a:hover {
   color: #C7C7C7;
+  cursor: pointer;
 }
 
 .signupTabbox a:hover{
