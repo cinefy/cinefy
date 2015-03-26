@@ -126,12 +126,12 @@ describe('user route end points', function() {
     .end(function(err,res) {
       expect(err).to.eql(null);
       expect(Array.isArray(res.body)).to.eql(true);
-      expect(JSON.parse(res.body[0]).name).to.eql('testItem');
-      expect(JSON.parse(res.body[0]).description).to.eql('testDes');
-      expect(JSON.parse(res.body[0]).movie).to.eql('testMovie');
-      expect(JSON.parse(res.body[0]).cta).to.eql('something');
-      expect(JSON.parse(res.body[0]).picture).to.eql('testLink');
-      expect(JSON.parse(res.body[0]).time).to.eql(50);
+      expect(res.body[0].name).to.eql('testItem');
+      expect(res.body[0].description).to.eql('testDes');
+      expect(res.body[0].movie).to.eql('testMovie');
+      expect(res.body[0].cta).to.eql('something');
+      expect(res.body[0].picture).to.eql('testLink');
+      expect(res.body[0].time).to.eql(50);
       done();
     });
   }); 
