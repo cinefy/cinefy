@@ -111,7 +111,6 @@ select {
   margin: 0 1em;
 }
 
-
 /*CSS for footer to be sticky at bottom*/
 
 html {
@@ -125,7 +124,6 @@ body {
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
   overflow: hidden;
-  background-color: #4A4A4A;
 }
 
 footer {
