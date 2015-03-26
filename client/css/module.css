@@ -1,3 +1,9 @@
+.menuButton {
+
+}
+
+/*<button class="menuButton">&#9776;</button>*/
+
 .navigation li {
   padding: 2em;
   display: inline;
@@ -132,4 +138,16 @@
   border: none;
   border-bottom: 1px solid #000;
   font-size: 1em;
+}
+
+/*Small Tablet
+********************************************/
+@media only screen and (min-width: 42em) {
+
+}
+
+/*Large tablet and Desktop
+********************************************/
+@media only screen and (min-width: 73em) {
+
 }
