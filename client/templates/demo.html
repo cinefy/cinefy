@@ -1,11 +1,20 @@
 <div class="pagePadding">
   <h1 class="mainHeader mainSubHeader">Cinefy Demo</h1>
   <div class="grid-container topPadding">
-    <video controls class="grid-50 fullWidth">
-      <source src="foo.mp4" type="video/mp4">
+    <video controls class="grid-50 fullWidth" id="mainmovie">
+      <source src="movie.mp4" type="video/mp4">
     </video>
     <section class="grid-50">
       <div id="preview" class="center"></div>
     </section>
+    <div data-ng-controller="feedController" data-ng-init="getAll()">
+      <ul data-ng-repeat="item in displayed">
+        <p>{{item.name}}</p>   <!-- timestamp -->
+        <img src="{{item.picture}}">  <!-- icon -->
+        <p>{{item.description}}</p>   <!-- title/description -->
+        <button data-ng-click="newLike(item)">Like</button>   <!-- like -->
+        <button data-ng-click="dislike(item)"></button>   <!-- dislike -->
+      </ul>
+    </div>
   </div>
 </div>
