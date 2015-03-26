@@ -8,7 +8,7 @@
     padding-top: 5.1em;
     top: 0;
     left: 0;
-    width: 200%;
+    width: 250%;
     height: auto;
   }
 
@@ -22,7 +22,7 @@
   }
 
   .homeContainer {
-    margin-top: 10em;
+    margin-top: 6em;
   }
 
   .buttonContainer {
@@ -54,6 +54,10 @@
 @media only screen and (min-width: 42em) {
   .homeVideo {
     width: 150%;
+  }
+
+  .homeContainer {
+    margin-top: 10em;
   }
 }
 

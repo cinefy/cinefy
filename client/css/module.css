@@ -1,22 +1,19 @@
-.menuButton {
-
-}
-
-/*<button class="menuButton">&#9776;</button>*/
-
-.navigation li {
-  padding: 2em;
-  display: inline;
-}
-
 .navigation a {
   color: #fff;
+}
+
+.navigation li {
+  padding: .3em 0;
 }
 
 .homeLink a {
   font-family: 'bebasregular', sans-serif;
   font-size: 1.414em;
   color: #99CC33;
+}
+
+.homeLink li {
+  padding: 0;
 }
 
 .mainHeader {
@@ -143,7 +140,14 @@
 /*Small Tablet
 ********************************************/
 @media only screen and (min-width: 42em) {
+  .navigation li {
+    padding: 2em;
+    display: inline;
+  }
 
+  .menuButton {
+    display: none;
+  }
 }
 
 /*Large tablet and Desktop
