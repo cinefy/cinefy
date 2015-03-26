@@ -3,18 +3,18 @@
 module.exports = function(app) {
   app.controller('signupinController', ['$scope', '$cookies', '$location', '$http', 'base64', function($scope, $cookies, $location, $http, base64) {
 
-    if($cookies.eat.length > 0) {
+    if($cookies.eat) {
       $location.path('/profile');
     }
 
     $scope.showLogin = function() {
-      var login = document.getElementById('login');
-      var signup = document.getElementById('signup');
+      $scope.logintab = true;
+
 
     }
 
     $scope.showSignup = function() {
-
+      $scope.logintab = false;
     }
 
     $scope.signUp = function() {

@@ -5,7 +5,7 @@ require('angular-route');
 require('angular-cookies');
 require('angular-utf8-base64');
 
-var cinefyApp = angular.module('cinefyApp', ['ngRoute', 'ngCookies', 'utf8-base64']);
+var cinefyApp = angular.module('cinefyApp', ['ngRoute', require('angular-cookies'), 'utf8-base64']);
 
 require('./controllers/feed_controller')(cinefyApp);
 require('./controllers/profile_controller')(cinefyApp);
