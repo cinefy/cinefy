@@ -7,12 +7,16 @@ module.exports = function(app) {
     $scope.allLikes = [];
 
     $scope.getLikes = function() {
+      console.log($cookies.eat);
+      console.log($cookies.username);
+      $http.defaults.headers.common['eat'] = $cookies.eat;
       $http({
         method: 'GET',
-        url: '/api/v1/get_likes/' + $cookies.name
+        url: '/api/v1/get_likes/' + $cookies.username
       })
       .success(function(data) {
         $scope.allLikes = data;
+        console.log($scope.allLikes);
       })
       .error(function(data) {
         console.log(data);

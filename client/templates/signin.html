@@ -1,13 +1,13 @@
 
-<div>
+<div data-ng-href="/#/signin">
   <section class="verticalAlign pagePadding">
-    <div class="signupContainer" data-ng-controller="signupinController" data-ng-init="login = true">
+    <div class="signupContainer" data-ng-controller="signupinController" data-ng-init="logintab=true">
       <div class="signupTabbox">
-        <a href="#" id="login" class="tab" data-ng-click=>Log in</a>
-        <a href="#" id="signup" class="tab select">Sign up</a>
+        <a id="login" class="tab" data-ng-click="showLogin()" data-ng-class="{select: logintab}">Log in</a>
+        <a id="signup" class="tab" data-ng-class="{select: !logintab}" data-ng-click="showSignup()">Sign up</a>
       </div>
       <div class="panel">
-        <div id="signupbox" class="signupbox" data-ng-if="!login">
+        <div id="signupbox" class="signupbox" data-ng-hide="logintab">
           <h2 class="smallTopMargin">Sign up for an account</h2>
           <form class="accountForm" data-ng-submit="signUp()">
             <input class="formInput" placeholder="Username" data-ng-model="signup.username" required>
@@ -15,7 +15,7 @@
             <button class="smallTopMargin" type="submit">Sign up</button>
           </form>
         </div>
-        <div id="loginbox" class="loginbox" data-ng-if="login">
+        <div id="loginbox" class="loginbox" data-ng-show="logintab">
           <h2 class="formTitleMargin">Log in to your account</h2>
           <form class="accountForm">
             <input class="formInput" placeholder="Username" data-ng-model="login.username">

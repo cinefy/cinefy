@@ -1,20 +1,20 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('signupinController', ['$scope', '$cookies', '$location', '$http', '$base64', function($scope, $cookies, $location, $http, $base64) {
+  app.controller('signupinController', ['$scope', '$cookies', '$location', '$http', 'base64', function($scope, $cookies, $location, $http, base64) {
 
-    if($cookies.eat.length > 0) {
+    if($cookies.eat) {
       $location.path('/profile');
     }
 
     $scope.showLogin = function() {
-      var login = document.getElementById('login');
-      var signup = document.getElementById('signup');
+      $scope.logintab = true;
+
 
     }
 
     $scope.showSignup = function() {
-
+      $scope.logintab = false;
     }
 
     $scope.signUp = function() {
@@ -35,7 +35,7 @@ module.exports = function(app) {
     };
 
     $scope.signIn = function() {
-      $http.defaults.headers.common['Authorization'] = 'Basic: ' + $base64.encode($scope.login.username + ':' + $scope.login.password);
+      $http.defaults.headers.common['Authorization'] = 'Basic: ' + base64.encode($scope.login.username + ':' + $scope.login.password);
       $http.get('/api/v1/sign_in')
       .success(function(data) {
         console.log('logged in');
