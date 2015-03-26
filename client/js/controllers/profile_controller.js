@@ -1,8 +1,12 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('profileController', ['$scope', '$http', '$cookies',
-    function($scope, $http, $cookies) {
+  app.controller('profileController', ['$scope', '$http', '$cookies', '$location',
+    function($scope, $http, $cookies, $location) {
+
+    if(!$cookies.eat) {
+      $location.path('/signin');
+    }
 
     $scope.allLikes = [];
 
