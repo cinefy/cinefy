@@ -80,7 +80,7 @@
 /*Sign up page styles*/
 
 .signupContainer {
-  width: 350px;
+  width: 300px;
 }
 
 .signupTabbox {
@@ -89,7 +89,7 @@
 
 .panel {
   background-color: #E6E6E6;
-  height: 300px;
+  height: 250px;
 }
 
 .tab {
@@ -98,7 +98,7 @@
   height: 40px;
   line-height: 40px;
   text-align: center;
-  width: 175px;
+  width: 150px;
   float: right;
   font-weight: bold;
   border-top: 3px solid #C7C7C7;
@@ -147,6 +147,18 @@
 
   .menuButton {
     display: none;
+  }
+
+  .signupContainer {
+    width: 350px;
+  }
+
+  .panel {
+    height: 300px;
+  }
+
+  .tab {
+    width: 175px;
   }
 }
 
