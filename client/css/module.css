@@ -74,6 +74,10 @@
   font-size: 0.8em;
 }
 
+.smallTopMargin {
+  margin-top: 1em;
+}
+
 /*Sign up page styles*/
 
 .signupContainer {
@@ -98,6 +102,7 @@
   width: 175px;
   float: right;
   font-weight: bold;
+  border-top: 3px solid #C7C7C7;
 }
 
 .signupTabbox a {
@@ -133,7 +138,5 @@
   font-size: 1em;
 }
 
-.smallTopMargin {
-  margin-top: 1em;
-}
+
 
