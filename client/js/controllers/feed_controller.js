@@ -11,26 +11,27 @@ module.exports = function(app) {
     $scope.displayed = [];
 
     $scope.getAll = function() {
-      console.log('working');
       $http.defaults.headers.common['eat'] = $cookies.eat;
       $http({
         method: 'GET',
         url: 'api/v1/item'
       })
       .success(function(data) {
+        console.log(data);
         $scope.items = data;
       })
       .error(function(data) {
         console.log(data);
       });
-
+      console.log('worked');
     };
 
     $scope.showDisplay = function() {
       function displayItem(element, index){
         if(element.time < document.getElementById("mainmovie").currentTime) {
-        $scope.displayed.push(element);
-        $scope.items.splice(index, 1);
+          console.log(document.getElementById("mainmovie").currentTime);
+          $scope.displayed.push(element);
+          $scope.items.splice(index, 1);
         }
       }
       $scope.apply($scope.items.forEach(displayItem));

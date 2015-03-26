@@ -68,6 +68,9 @@ module.exports = function(app, passport, appSecret) {
   app.get('/get_likes/:name', eat_auth(appSecret), function(req, res) {
     User.findOne({"basic.name": req.params.name}, function(err, data) {
       if(err) return res.status(500).send({'msg': 'could not retrieve liked list'});
+      for (var i = 0; i < data.likes.length; i++){
+        data.likes[i] = JSON.parse(data.likes[i]);
+      }
       res.json(data.likes);
     });
   });

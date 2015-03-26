@@ -23,5 +23,9 @@ cinefyApp.config(['$routeProvider', function($routeProvider) {
   .when('/signin', {
     templateUrl: 'templates/signin.html',
     controller: 'signupinController'
+  })
+  .when('/play', {
+    templateUrl: 'templates/demo.html',
+    controller: 'feedController'
   });
 }]);
