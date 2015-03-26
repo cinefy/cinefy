@@ -28,7 +28,7 @@ describe('user route end points', function() {
   before(function(done) {
     chai.request('localhost:3000/api/v1')
     .post('/item')
-    .send({name: 'testItem', picture: 'testLink', time: 10, eat: testToken})
+    .send({name: 'testItem', picture: 'testLink', description: 'testDes', movie:'testMovie', cta: 'something', time: 50,  eat: testToken})
     .end(function(err, res) {
       expect(err).to.eql(null);
       done();
@@ -93,14 +93,16 @@ describe('user route end points', function() {
   it('should add liked item to user profile', function(done) {
     chai.request('localhost:3000/api/v1')
     .put('/like_item/testItem')
-    .send({name:'test' ,eat: testToken})
+    .send({name:'test', eat: testToken})
     .end(function(err,res) {
       expect(err).to.eql(null);
       expect(res.body.basic.name).to.eql('test');
-      expect(Array.isArray(res.body.likes)).to.eql(true);
       expect(JSON.parse(res.body.likes[0]).name).to.eql('testItem');
       expect(JSON.parse(res.body.likes[0]).picture).to.eql('testLink');
-      expect(JSON.parse(res.body.likes[0]).time).to.eql(10);
+      expect(JSON.parse(res.body.likes[0]).movie).to.eql('testMovie');
+      expect(JSON.parse(res.body.likes[0]).description).to.eql('testDes');
+      expect(JSON.parse(res.body.likes[0]).cta).to.eql('something');
+      expect(JSON.parse(res.body.likes[0]).time).to.eql(50);
       done();
     });
   });
@@ -125,11 +127,14 @@ describe('user route end points', function() {
       expect(err).to.eql(null);
       expect(Array.isArray(res.body)).to.eql(true);
       expect(JSON.parse(res.body[0]).name).to.eql('testItem');
+      expect(JSON.parse(res.body[0]).description).to.eql('testDes');
+      expect(JSON.parse(res.body[0]).movie).to.eql('testMovie');
+      expect(JSON.parse(res.body[0]).cta).to.eql('something');
       expect(JSON.parse(res.body[0]).picture).to.eql('testLink');
-      expect(JSON.parse(res.body[0]).time).to.eql(10);
+      expect(JSON.parse(res.body[0]).time).to.eql(50);
       done();
     });
-  });
+  }); 
 
   it('should fail to get user likes without valid token', function(done) {
     chai.request('localhost:3000/api/v1')
@@ -163,5 +168,4 @@ describe('user route end points', function() {
       done();
     });
   });
-
 });
