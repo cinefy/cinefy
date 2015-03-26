@@ -27,3 +27,13 @@ a:hover {
 .homeLink a:hover {
   color: #6F9425;
 }
+
+/*Small Tablet
+********************************************/
+@media only screen and (min-width: 42em) {
+}
+
+/*Large tablet and Desktop
+********************************************/
+@media only screen and (min-width: 73em) {
+  }

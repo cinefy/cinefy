@@ -111,7 +111,6 @@ select {
   margin: 0 1em;
 }
 
-
 /*CSS for footer to be sticky at bottom*/
 
 html {
@@ -124,8 +123,6 @@ body {
   padding-bottom: 4em;
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
-  background-color: #4A4A4A;
 }
 
 footer {
@@ -140,3 +137,16 @@ footer {
 }
 /*End footer styles*/
 
+
+
+
+/*Small Tablet
+********************************************/
+@media only screen and (min-width: 42em) {
+}
+
+/*Large tablet and Desktop
+********************************************/
+@media only screen and (min-width: 73em) {
+
+}

@@ -2,12 +2,17 @@
   width: 100%;
 }
 
+.hideOverflow {
+  overflow: hidden;
+}
+
 .homeVideo {
   z-index: -1;
   position: absolute;
+  padding-top: 5.1em;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 250%;
   height: auto;
 }
 
@@ -21,11 +26,15 @@
 }
 
 .homeContainer {
-  margin-top: 10em;
+  padding-top: 6em;
 }
 
 .buttonContainer {
   margin-top: 3.5em;
+}
+
+.profilePagePadding {
+  padding: 2em;
 }
 
 .pagePadding {
@@ -47,6 +56,33 @@
 .center {
   margin: 0 auto;
 }
+
+/*Small Tablet
+********************************************/
+@media only screen and (min-width: 42em) {
+  .homeVideo {
+    width: 150%;
+  }
+
+  .profilePagePadding {
+    padding: 5em;
+  }
+
+  .homeContainer {
+    padding-top: 10em;
+  }
+}
+
+
+/*Large tablet and Desktop
+********************************************/
+@media only screen and (min-width: 73em) {
+  .homeVideo {
+    width: 100%;
+  }
+
+}
+
 
 /* ============================================ */
 /* This file has a mobile-to-desktop breakpoint */

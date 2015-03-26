@@ -48,12 +48,10 @@ module.exports = function(app, passport, appSecret) {
       if(err) return res.status(500).send({'msg':'could not find item'});
 
       var likedItem = data;
-      delete likedItem._id;
       
       User.findOne({"basic.name": req.body.name}, function(err, data) {
         if(err) return res.status(500).send({'msg':'could not find user'});
         var newUser = data;
-        delete newUser._id;
 
         newUser.likes.push(JSON.stringify(likedItem));
       
