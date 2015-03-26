@@ -35,7 +35,7 @@
   padding-top: 2em;
 }
 
-.topPadding p {
+.blockParagraph {
   padding: 0 10em 1em 10em;
   text-align: justify;
   line-height: 1.3em;
@@ -59,10 +59,6 @@
   border-radius: .7em;
   padding: .7em 2.3em;
   letter-spacing: .1em;
-}
-
-.profileButton {
-  margin: .5em .5em 0 .5em;
 }
 
 .flex {
