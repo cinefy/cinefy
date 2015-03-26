@@ -2,8 +2,10 @@
 
 require('angular/angular');
 require('angular-route');
+require('angular-cookies');
+require('angular-utf8-base64');
 
-var cinefyApp = angular.module('cinefyApp', ['ngRoute']);
+var cinefyApp = angular.module('cinefyApp', ['ngRoute', 'ngCookies', 'utf8-base64']);
 
 require('./controllers/feed_controller')(cinefyApp);
 require('./controllers/profile_controller')(cinefyApp);
@@ -15,10 +17,11 @@ cinefyApp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'templates/home.html'
   })
   .when('/profile', {
-    templateUrl: 'templates/myprofile.html'
+    templateUrl: 'templates/myprofile.html',
+    controller: 'profileController'
   })
   .when('/signin', {
     templateUrl: 'templates/signin.html',
     controller: 'signupinController'
-  })
+  });
 }]);

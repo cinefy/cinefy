@@ -11,6 +11,7 @@ module.exports = function(app) {
     $scope.displayed = [];
 
     $scope.getAll = function() {
+      console.log('working');
       $http.defaults.headers.common['eat'] = $cookies.eat;
       $http({
         method: 'GET',
