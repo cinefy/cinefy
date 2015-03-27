@@ -167,14 +167,11 @@
   background-color: #B50000;
 }
 
-/*.flexFeed {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: center;
+.flexFeed {
+  display: flex;
   align-items: center;
-}*/
+  justify-content: space-between;
+}
 
 .likesList {
   font-size: .8em;
