@@ -5,15 +5,14 @@
       <source src="https://0b6845616181a2ff0027f7f35cd369b142bd2280.googledrive.com/host/0Bwtu_AtQD3sTeWZMZmpuSkRsbGc/Cinefy_Movie_w_Intro.mp4" type="video/mp4">
     </video>
     <section class="grid-50">
-      <div id="preview" class="center"></div>
+      <div data-ng-controller="feedController" data-ng-init="workMagic()">
+        <ul class="inline" data-ng-if="showcase" data-ng-repeat="show in showcase">
+          <li><img class="likePicture" src="{{ show.picture }}"></li>  <!-- icon -->
+          <li>{{ show.description}}</li>   <!-- title/description -->
+          <li><button class="likeButton" data-ng-click="newLike(show)">&#10003;</button></li>   <!-- like -->
+          <li><button class="dislikeButton" data-ng-click="dislike(show)">&#10007;</button></li>   <!-- dislike -->
+        </ul>
+      </div>
     </section>
-    <div data-ng-controller="feedController" data-ng-init="workMagic()">
-      <ul data-ng-if="showcase" data-ng-repeat="show in showcase">
-        <li><img src="{{ show.picture }}"></li>  <!-- icon -->
-        <li>{{ show.description}}</li>   <!-- title/description -->
-        <li><button data-ng-click="newLike(show)">Like</button></li>   <!-- like -->
-        <li><button data-ng-click="dislike(show)">Dislike</button></li>   <!-- dislike -->
-      </ul>
-    </div>
   </div>
 </div>
