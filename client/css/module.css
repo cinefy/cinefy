@@ -141,35 +141,30 @@
 .containerScroll {
   height: 400px;
   overflow: auto;
-  border: 1px solid black;
-  /*width: 300px;
-  position: absolute;
-  top: 10px;
-  left: 10px;*/
+  border: 5px solid black;
+  border-radius: 10px;
 }
 
 .likePicture {
-  max-width: 50px;
+  width: 50px;
+  width: 50px;
 }
 
-.likeButton {
+.feedButton {
+  color: #FFF;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: .2em;
+}
+
+.likeB {
   background-color: #199600;
-  color: #FFF;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  padding: .2em;
 }
 
-.dislikeButton {
+.dislikeB {
   background-color: #B50000;
-  color: #FFF;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  padding: .2em;
 }
 
 .flexFeed {
@@ -190,7 +185,7 @@
   padding: 0 1em;
 }
 
-/*Small Tablet
+/*Tablet to desktop
 ********************************************/
 @media only screen and (min-width: 42em) {
   .navigation li {
@@ -211,12 +206,8 @@
   }
 
   .likePicture {
-    max-width: 75px;
+    width: 75px;
+    height: 75px;
   }
 }
 
-/*Large tablet and Desktop
-********************************************/
-@media only screen and (min-width: 73em) {
-
-}
