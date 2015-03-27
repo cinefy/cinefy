@@ -64,6 +64,18 @@
   letter-spacing: .1em;
 }
 
+  .likeButton {
+    background-color: #199600;
+    color: #FFF;
+    border-radius: 50%;
+  }
+
+  .dislikeButton {
+    background-color: #B50000;
+    color: #FFF;
+    border-radius: 50%;
+  }
+
 .flex {
   display: flex;
   align-items: center;
@@ -75,6 +87,10 @@
 
 .smallTopMargin {
   margin-top: 1em;
+}
+
+.likePicture {
+  max-width: 50px;
 }
 
 /*Sign up page styles*/
