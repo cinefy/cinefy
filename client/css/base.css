@@ -109,6 +109,7 @@ select {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   margin: 0 1em;
+  outline: none;
 }
 
 /*CSS for footer to be sticky at bottom*/

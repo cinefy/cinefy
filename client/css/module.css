@@ -77,6 +77,10 @@
   margin-top: 1em;
 }
 
+.likePicture {
+  max-width: 50px;
+}
+
 /*Sign up page styles*/
 
 .signupContainer {
