@@ -9,7 +9,6 @@
     </section>
     <div data-ng-controller="feedController" data-ng-init="workMagic()">
       <ul data-ng-if="showcase" data-ng-repeat="show in showcase">
-        <li>{{ show.name }}</li>   <!-- timestamp -->
         <li><img src="{{ show.picture }}"></li>  <!-- icon -->
         <li>{{ show.description}}</li>   <!-- title/description -->
         <li><button data-ng-click="newLike(show)">Like</button></li>   <!-- like -->
