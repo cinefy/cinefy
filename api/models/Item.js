@@ -13,6 +13,8 @@ var itemSchema = mongoose.Schema({
 
   cta: String,
 
+  message: String,
+
   time: Number
 });
 
