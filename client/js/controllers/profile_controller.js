@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('profileController', ['$scope', '$http', '$cookies', '$location',
-    function($scope, $http, $cookies, $location) {
+  app.controller('profileController', ['$scope', '$http', '$cookies', '$location', '$window',
+    function($scope, $http, $cookies, $location, $window) {
 
     if(!$cookies.eat) {
       $location.path('/signin');
@@ -25,6 +25,10 @@ module.exports = function(app) {
       .error(function(data) {
         console.log(data);
       });
+    }
+
+    $scope.openLink = function(link) {
+      $window.open(link);
     }
   }]);
 };

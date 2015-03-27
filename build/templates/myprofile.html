@@ -31,7 +31,7 @@
         <li class="grid-25">{{ like.description }}</li>
         <li class="grid-25">
           <a href="{{ like.cta }}">
-            <button class="ctaButton">{{ like.message }}</button>
+            <button class="ctaButton" data-ng-click="openLink(like.cta)">{{ like.message }}</button>
           </a>
         </li>
       </ul>
