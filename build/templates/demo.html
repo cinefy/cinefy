@@ -7,10 +7,10 @@
     <section class="grid-50">
     </section>
     <div class="likesList containerScroll" data-ng-controller="feedController" data-ng-init="workMagic()">
-      <ul class="inline grid-parent" data-ng-if="showcase" data-ng-repeat="show in showcase">
-        <li class="grid-25"><img class="likePicture" src="{{ show.picture }}"></li>  <!-- icon -->
-        <li class="grid-50">{{ show.description}}</li>   <!-- title/description -->
-        <li class="inline grid-25">
+      <ul class="inline flexFeed" data-ng-if="showcase" data-ng-repeat="show in showcase">
+        <li><img class="likePicture" src="{{ show.picture }}"></li>  <!-- icon -->
+        <li>{{ show.description}}</li>   <!-- title/description -->
+        <li class="inline">
           <button class="feedButton likeB" data-ng-click="newLike(show)">&#10003;</button>  <!-- like -->
           <button class="feedButton dislikeB" data-ng-click="dislike(show)">&#10007;</button>   <!-- dislike -->
         </li>
