@@ -23,7 +23,7 @@
           <li data-ng-click="awayHome()"><a ng-href="/#/play">How it works</a></li>
           <li data-ng-click="awayHome()"><a ng-href="/#/profile">My Profile</a></li>
           <li data-ng-click="awayHome()"><a data-ng-href="/#/signin" data-ng-if="logOut()">Sign up | Log in</a></li>
-          <li data-ng-click="awayHome()"><a data-ng-href="/#/signin" data-ng-if="loggedIn()">Log out</a></li>
+          <li data-ng-click="awayHome()"><a data-ng-href="/#/signin" data-ng-if="loggedIn()" data-ng-click="signOut()">Log out</a></li>
         </ul>
       </nav>
     </header>
