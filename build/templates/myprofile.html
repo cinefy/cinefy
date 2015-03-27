@@ -24,13 +24,12 @@
     <div ng-controller="profileController" data-ng-init="getLikes()" class="grid-container topPadding likesList">
     <!-- Each line of the table is a new unordered list with data in each list item. -->
       <ul ng-repeat="like in allLikes" class="grid-parent flex">
-        <li class="grid-20">
+        <li class="grid-25">
           <img src="{{ like.picture }}"/>
         </li>
-        <li class="grid-20">{{ like.movie }}</li>
-        <li class="grid-20">{{ like.description }}</li>
-        <li class="grid-20">{{ like.type }}</li>
-        <li class="grid-20">
+        <li class="grid-25">{{ like.movie }}</li>
+        <li class="grid-25">{{ like.description }}</li>
+        <li class="grid-25">
           <a href="{{ like.cta }}">
             <button class="ctaButton">{{ like.message }}</button>
           </a>
