@@ -34,6 +34,11 @@
   display: inline;
 }
 
+.inline li {
+  display: inline;
+  padding: 0 .5em;;
+}
+
 .topPadding {
   padding-top: 2em;
 }
@@ -64,17 +69,19 @@
   letter-spacing: .1em;
 }
 
-  .likeButton {
-    background-color: #199600;
-    color: #FFF;
-    border-radius: 50%;
-  }
+.likeButton {
+  background-color: #199600;
+  color: #FFF;
+  border-radius: 50%;
+  padding: 0;
+}
 
-  .dislikeButton {
-    background-color: #B50000;
-    color: #FFF;
-    border-radius: 50%;
-  }
+.dislikeButton {
+  background-color: #B50000;
+  color: #FFF;
+  border-radius: 50%;
+  padding: 0;
+}
 
 .flex {
   display: flex;
@@ -171,6 +178,10 @@
 
   .tab {
     width: 175px;
+  }
+
+  .likePicture {
+    max-width: 75px;
   }
 }
 
