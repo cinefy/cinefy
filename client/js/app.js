@@ -11,12 +11,14 @@ require('./lib/users')(cinefyApp);
 require('./controllers/feed_controller')(cinefyApp);
 require('./controllers/profile_controller')(cinefyApp);
 require('./controllers/signup_controller')(cinefyApp);
+require('./controllers/home_controller')(cinefyApp);
 
 
 cinefyApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: 'templates/home.html'
+    templateUrl: 'templates/home.html',
+    controller: 'homeController'
   })
   .when('/profile', {
     templateUrl: 'templates/myprofile.html',

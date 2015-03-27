@@ -3,9 +3,9 @@
 module.exports = function(app) {
   app.controller('feedController', ['$scope', '$cookies', '$location', '$http', '$interval', function($scope, $cookies, $location, $http, $interval) {
 
-    // if (!$cookies.eat || $cookies.eat.length < 1 ) {
-    //   $location.path('/signin');
-    // }
+    if (!$cookies.eat || $cookies.eat.length < 1 ) {
+      $location.path('/signin');
+    }
 
     $scope.items = [];
     $scope.showcase = [];
