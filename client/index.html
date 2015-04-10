@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" ng-app="cinefyApp">
+<html class="no-js" data-ng-app="cinefyApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,9 +19,9 @@
     <header>
       <nav>
         <ul class="navigation fullWidth">
-          <li class="homeLink" data-ng-click="toHome()"><a ng-href="/#/">Cinefy</a></li>
-          <li data-ng-click="awayHome()"><a ng-href="/#/play">How it works</a></li>
-          <li data-ng-click="awayHome()"><a ng-href="/#/profile">My Profile</a></li>
+          <li class="homeLink" data-ng-click="toHome()"><a data-ng-href="/#/">Cinefy</a></li>
+          <li data-ng-click="awayHome()"><a data-ng-href="/#/play">How it works</a></li>
+          <li data-ng-click="awayHome()"><a data-ng-href="/#/profile">My Profile</a></li>
           <li data-ng-click="awayHome()"><a data-ng-href="/#/signin" data-ng-if="logOut()">Sign up | Log in</a></li>
           <li data-ng-click="awayHome()"><a data-ng-href="/#/signin" data-ng-if="loggedIn()" data-ng-click="signOut()">Log out</a></li>
         </ul>
