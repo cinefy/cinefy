@@ -137,7 +137,64 @@
   font-size: 1em;
 }
 
-/*Small Tablet
+/*Feed container styles*/
+.containerScroll {
+  height: 400px;
+  overflow: auto;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.likePicture {
+  width: 50px;
+  width: 50px;
+}
+
+.feedButton {
+  color: #FFF;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: .2em;
+}
+
+.likeB {
+  background-color: #199600;
+}
+
+.dislikeB {
+  background-color: #B50000;
+}
+
+.flexFeed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.likesList {
+  font-size: .8em;
+}
+
+.inline li {
+  display: inline;
+  padding: 0 1em;
+}
+
+.twoButtons {
+  width: 90px;
+}
+
+.lineHeight {
+  line-height: 1.2em;
+}
+
+.descriptionWidth {
+  width: 300px;
+}
+
+/*Tablet to desktop
 ********************************************/
 @media only screen and (min-width: 42em) {
   .navigation li {
@@ -156,10 +213,10 @@
   .tab {
     width: 175px;
   }
+
+  .likePicture {
+    width: 75px;
+    height: 75px;
+  }
 }
 
-/*Large tablet and Desktop
-********************************************/
-@media only screen and (min-width: 73em) {
-
-}

@@ -21,18 +21,16 @@
       </select>
     </section>
     <!-- Below is where the grid-like content will go -->
-    <div ng-controller="profileController" data-ng-init="getLikes()" class="grid-container topPadding likesList">
+    <div data-ng-controller="profileController" data-ng-init="getLikes()" class="grid-container topPadding likesList">
     <!-- Each line of the table is a new unordered list with data in each list item. -->
-      <ul ng-repeat="like in allLikes" class="grid-parent flex">
-        <li class="grid-25">
-          <img src="{{ like.picture }}"/>
+      <ul data-ng-repeat="like in allLikes" class="grid-parent flex">
+        <li class="grid-10">
+          <img class="likePicture" src="{{ like.picture }}"/>
         </li>
-        <li class="grid-25">{{ like.movie }}</li>
-        <li class="grid-25">{{ like.description }}</li>
-        <li class="grid-25">
-          <a href="{{ like.cta }}">
-            <button class="ctaButton">{{ like.message }}</button>
-          </a>
+        <li class="grid-30">{{ like.movie }}</li>
+        <li class="grid-30">{{ like.description }}</li>
+        <li class="grid-30">
+        <button class="ctaButton" data-ng-click="openLink(like.cta)">{{ like.message }}</button>
         </li>
       </ul>
     </div>
