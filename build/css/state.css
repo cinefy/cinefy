@@ -1,0 +1,37 @@
+.likesList ul:nth-child(odd) {
+  background-color: #C7C7C7;
+}
+
+.likesList ul:nth-child(even) {
+  background-color: #E6E6E6;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #243969;
+}
+
+.ctaButton:hover {
+  background-color: #6F9425;
+}
+
+a:hover {
+  color: #C7C7C7;
+  cursor: pointer;
+}
+
+.signupTabbox a:hover{
+  color: #304F92;
+}
+
+.homeLink a:hover {
+  color: #6F9425;
+}
+
+.likeB:hover {
+  background-color: #126B00;
+}
+
+.dislikeB:hover {
+  background-color: #850000;
+}

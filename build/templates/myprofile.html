@@ -1,0 +1,38 @@
+<div data-ng-href="/#/profile" class="profilePagePadding">
+  <div class="clearfix">
+    <h1 class="floatLeft">Welcome to your profile page</h1>
+  </div>
+  <div class="grid-container topPadding">
+    <section class="alignLeft">
+      <p class="inline">Filter by...</p>
+      <select name="filterMovie">
+        <option value="">Movie</option>
+        <option value="jurassicPark">Jurassic Park</option>
+        <option value="bourneIdentity">Bourne Identity</option>
+        <option value="jamesBondSkyfall">James Bond: Skyfall</option>
+        <option value="terminator2">Terminator 2</option>
+      </select>
+      <select name="filterType">
+        <option value="">Type</option>
+        <option value="products">Products</option>
+        <option value="music">Music</option>
+        <option value="locations">Locations</option>
+        <option value="trivia">Trivia</option>
+      </select>
+    </section>
+    <!-- Below is where the grid-like content will go -->
+    <div data-ng-controller="profileController" data-ng-init="getLikes()" class="grid-container topPadding likesList">
+    <!-- Each line of the table is a new unordered list with data in each list item. -->
+      <ul data-ng-repeat="like in allLikes" class="grid-parent flex">
+        <li class="grid-10">
+          <img class="likePicture" src="{{ like.picture }}"/>
+        </li>
+        <li class="grid-30">{{ like.movie }}</li>
+        <li class="grid-30">{{ like.description }}</li>
+        <li class="grid-30">
+        <button class="ctaButton" data-ng-click="openLink(like.cta)">{{ like.message }}</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
